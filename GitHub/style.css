@@ -1,0 +1,108 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    text-transform:capitalize;
+    height: 3000px;
+}
+nav{
+    z-index: 2;
+    overflow: hidden;
+    height: auto;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+nav a{
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 14px 16px;
+    font-size: 17px;
+    margin-top: 10px;
+    -webkit-tap-highlight-color:aliceblue;
+}
+nav a.signin,a.signup,nav input{
+    float:right;
+
+}
+nav a.signup{
+    border:whitesmoke 1px double;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 20px 10px auto auto;
+}
+nav a.signin{
+    margin-top:15px;
+}
+nav a.icon{
+    display: none;
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    border-radius: 10px;
+}
+nav a:hover{
+    color: rgba(240, 248, 255, 0.767);
+    border-color: rgba(240, 248, 255, 0.66);
+    transition: 0.4s;
+}
+nav input{
+    background-color:rgba(128, 128, 128, 0.447);
+    margin: 20px auto auto auto;
+    border-color: aliceblue;
+    border-width: 0.5px;
+    height: 34px;
+    width: 200px;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+::-ms-input-placeholder {
+    color: gainsboro; /* not working ??! */
+}
+video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+}
+#blacklayer{
+    position: fixed;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    min-height: 100%;
+}
+
+@media screen and (max-width:850px){
+    nav a.navElements{display: none; }
+    nav input{display: none;}
+    nav a.icon{display: block;}
+}
+@media screen and ( max-width:850px ) {
+    .verNav {
+        position: relative;
+    }
+    .verNav a.icon{
+        position: absolute;
+         top: 0px;
+         width: auto;
+    }
+    .verNav a.signup,a.signin{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    a.signin{
+        right: 100px;
+    }
+    .verNav a.navElements{
+        float: none;
+        display: block;
+    }
+    .verNav a:first-child{
+        margin-top: 50px;
+    }
+}

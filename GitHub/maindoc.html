@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Re-make</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- background vid -->
+    <video src="bg.mp4" loop autoplay muted></video>
+    <div id="blacklayer" onclick="closeNavMenu();"></div>
+
+    <!-- nav bar -->
+    <nav class="horNav" id="nav">
+        <a href="" class="navElements" >product</a>
+        <a href="" class="navElements">solutions</a>
+        <a href="" class="navElements">open source</a>
+        <a href="" class="navElements">pricing</a>
+        <a href="" class="signup">sign up</a>
+        <a href="" class="signin">sign in</a>
+        <input type="emeil" placeholder="Email">
+        <a href="javascript:void(0);" class="icon" onclick="if (i==0) openNavMenu();else closeNavMenu();">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    
+
+    <script>
+        // var checker;
+        // function verticalMenu(){
+        //     checker=document.getElementById('nav').className;
+        //     if(checker=="horNav"){
+        //         checker="verNav";
+        //     } else {checker="horNav";}
+            
+        //     document.getElementById('nav').className=checker;
+        //     if(checker=="horNav") i=0;
+        //     else i=1;
+        // }
+
+        var i=0;
+        function openNavMenu(){
+            document.getElementById('nav').className="verNav";
+            document.getElementById('blacklayer').style.zIndex=1;
+            i=1;
+        }
+        function closeNavMenu(){
+            if(i==0) return 0;
+            else{
+            document.getElementById('nav').className="horNav";
+            document.getElementById('blacklayer').style.zIndex=-1;
+            i=0;
+            }
+        }
+    </script>
+</body>
+</html>
