@@ -76,12 +76,12 @@ video{
     min-height: 100%;
 }
 
-@media screen and (max-width:850px){
+@media screen and (max-width:900px){
     nav a.navElements{display: none; }
     nav input{display: none;}
     nav a.icon{display: block;}
 }
-@media screen and ( max-width:850px ) {
+@media screen and ( max-width:900px ) {
     .verNav {
         position: relative;
     }
